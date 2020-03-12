@@ -67,6 +67,7 @@ public class MongodbDao {
 				subQueryList.add(new BasicDBObject("num", new BasicDBObject("$lte", 이하 값)));
 				subQueryList.add(new BasicDBObject("num", new BasicDBObject("$gte", 이상 값)));
 				subQueryList.add(new BasicDBObject("num", new BasicDBObject("$gt", 초과 값)));
+				subQueryList.add(new BasicDBObject("num", new BasicDBObject("$eq", 동일 값)));
 				query = new BasicDBObject("$and", subQueryList);
 			 * 
 			 * -> MongoDB query
@@ -74,7 +75,8 @@ public class MongodbDao {
 						    {"num":{"$lt":미만 값}},
 						    {"num":{"$lte":이하 값}},
 						    {"num":{"$gte":이상 값}},
-						    {"num":{"$gt":초과 값}}
+						    {"num":{"$gt":초과 값}},
+						    {"num":{"$eq":동일 값}}
 					    ]
 					}); 
 			 */
