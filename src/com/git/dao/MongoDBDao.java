@@ -14,7 +14,7 @@ import com.mongodb.MongoClient;
  * @author taehee.kwon
  * @since 2020.03.11
  */
-public class MongodbDao {
+public class MongoDBDao {
 	
 	/**
 	 * 몽고DB Collection에서 Document 가져오는 메서드
